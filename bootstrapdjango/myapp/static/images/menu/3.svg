@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#120d15"/>
+      <stop offset="100%" stop-color="#563042"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.35)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.10)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="640" cy="150" r="110" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="180" cy="650" r="150" fill="rgba(255,255,255,0.06)"/>
+  <path d="M300 180h200v350c0 78-64 142-142 142s-142-64-142-142V180z" fill="url(#glass)" stroke="rgba(255,255,255,0.7)" stroke-width="8"/>
+  <path d="M282 180h236l-28 56H310z" fill="#7f4d5b"/>
+  <rect x="315" y="260" width="170" height="170" rx="18" fill="rgba(255,255,255,0.18)"/>
+  <path d="M350 240c32-26 66-26 100 0" stroke="rgba(255,255,255,0.5)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <rect x="200" y="120" width="400" height="120" rx="24" fill="rgba(16,18,20,0.36)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="400" y="195" text-anchor="middle" font-size="58" fill="white" font-weight="700" font-family="Segoe UI, Arial, sans-serif">NIGHT</text>
+  <rect x="205" y="570" width="390" height="80" rx="18" fill="rgba(14,22,30,0.45)" stroke="rgba(255,255,255,0.22)"/>
+  <text x="400" y="620" text-anchor="middle" font-size="24" fill="rgba(255,255,255,0.8)" font-family="Segoe UI, Arial, sans-serif" letter-spacing="4">STOUT</text>
+  <circle cx="615" cy="620" r="62" fill="#f4d35e" fill-opacity="0.9"/>
+  <path d="M600 595h30v60h-30z M585 610h60v20h-60z" fill="white" opacity="0.8"/>
+</svg>

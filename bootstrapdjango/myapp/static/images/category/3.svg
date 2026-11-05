@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2c1e1a"/>
+      <stop offset="100%" stop-color="#b77f42"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="310" cy="80" r="50" fill="rgba(255,255,255,0.10)"/>
+  <path d="M140 90h120v220c0 32-26 58-58 58s-62-26-62-58V90z" fill="rgba(255,255,255,0.26)" stroke="rgba(255,255,255,0.7)" stroke-width="4"/>
+  <path d="M126 90h148l-18 32H144z" fill="#f0c27b"/>
+  <rect x="145" y="150" width="110" height="110" rx="12" fill="rgba(255,255,255,0.18)"/>
+  <text x="200" y="295" text-anchor="middle" font-size="22" fill="white" font-weight="700" font-family="Segoe UI, Arial, sans-serif">LAGERS</text>
+  <text x="200" y="330" text-anchor="middle" font-size="15" fill="rgba(255,255,255,0.8)" font-family="Segoe UI, Arial, sans-serif" letter-spacing="2">CRISP &amp; CLEAN</text>
+</svg>

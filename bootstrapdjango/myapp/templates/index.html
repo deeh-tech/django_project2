@@ -1,0 +1,1152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Deeh Breweries Nairobi">
+      <meta name="description" content="Deeh Breweries Rongai - Kenyan craft beer, tasting room and brewery experiences in Nairobi.">
+      <title>Deeh Breweries Rongai | Kenyan Craft Beer in Nairobi</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="{% static 'css/aos.css' %}" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="{% static 'css/swiper-bundle.min.css' %}" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="{% static 'css/all.min.css' %}"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+254 712 345 678</span>
+                  <span><i class="fas fa-envelope"></i>hello@deehbreweries.co.ke</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Rongai, Nairobi, Kenya</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-fire me-1"></i>Fresh Tap Release This Weekend</span>
+                  <div class="tsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-tiktok"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="#">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-beer"></i></div>
+                  <div>
+                     <div class="bname">Deeh <span>Breweries</span></div>
+                     <div class="bsub">Rongai • Nairobi</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#menu">Brews</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#chefs">Brewers</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#reservation">Tastings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+               </ul>
+               <div class="d-flex align-items-center gap-1">
+                  <button id="navSearchBtn" title="Search"><i class="fas fa-search"></i></button>
+                  <a href="#menu" class="nav-link nav-cta"><i class="fas fa-beer me-1"></i>Book a Tasting</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- ============================================================
+         FIX 1 � SEARCH OVERLAY POPUP
+         ============================================================ -->
+      <div id="searchOv">
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>What are you in the mood to sip?</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Search pale ale, stout, lager..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="sovcats">
+               <div class="sovcat active" data-cat="all">
+                  <img src="{% static 'images/menu/1.svg' %}" alt=""/>All Brews
+               </div>
+               <div class="sovcat" data-cat="burgers">
+                  <img src="{% static 'images/menu/1.svg' %}" alt=""/>Ales
+               </div>
+               <div class="sovcat" data-cat="pizza">
+                  <img src="{% static 'images/menu/2.svg' %}" alt=""/>Lagers
+               </div>
+               <div class="sovcat" data-cat="chicken">
+                  <img src="{% static 'images/menu/3.svg' %}" alt=""/>Stouts
+               </div>
+               <div class="sovcat" data-cat="wraps">
+                  <img src="{% static 'images/menu/4.svg' %}" alt=""/>IPAs
+               </div>
+               <div class="sovcat" data-cat="pasta">
+                  <img src="{% static 'images/menu/5.svg' %}" alt=""/>Seasonals
+               </div>
+               <div class="sovcat" data-cat="desserts">
+                  <img src="{% static 'images/menu/6.svg' %}" alt=""/>Limited Series
+               </div>
+            </div>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+               <span class="ttag">Sunset Pale</span>
+               <span class="ttag">Amber Harvest</span>
+               <span class="ttag">Night Shift</span>
+               <span class="ttag">Citrus Bloom</span>
+               <span class="ttag">Copper Lager</span>
+               <span class="ttag">Hopped Reserve</span>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         HERO
+         ============================================================ -->
+      <section id="hero">
+         <div class="hs hs1"></div>
+         <div class="hs hs2"></div>
+         <div class="hbgtxt">BREW</div>
+         <div class="container">
+            <div class="row align-items-center g-5" style="min-height:88vh;">
+               <div class="col-lg-6">
+                  <div class="hbadge">
+                     <div class="hbi"><i class="fas fa-star"></i></div>
+                     <span>#1 Craft Brewery in the South</span>
+                  </div>
+                  <h1 class="htitle">Kenyan Craft Beer<br/>From <span class="hl">Rongai</span>, Nairobi</h1>
+                  <p class="hdesc">Deeh Breweries brings authentic Kenyan brewing culture to Rongai with crisp lagers, bold amber ales, and rich small-batch stouts crafted for memorable evenings.</p>
+                  <div class="d-flex flex-wrap gap-3 mb-2">
+                     <a href="#menu" class="btn-red"><i class="fas fa-beer"></i>Explore Brews</a>
+                  </div>
+                  <div class="hstats d-flex gap-3 flex-wrap mt-4">
+                     <div class="hstat"><span class="snum">18k<em>+</em></span><small>Happy Pourers</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">40<em>+</em></span><small>Signature Brews</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">12<em>+</em></span><small>Years Brewing</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">7<em>yr</em></span><small>Taproom Awards</small></div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div style="position:relative;text-align:center;">
+                     <div class="hcircle">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80" alt="Brewery taproom in Rongai Nairobi"/>
+                     </div>
+                     <div class="fcard fc1">
+                        <div class="fcoi r"><i class="fas fa-fire"></i></div>
+                        <div><span class="fcnum">Fresh Drop</span><span class="fcsm">New saison release</span></div>
+                     </div>
+                     <div class="fcard fc2">
+                        <div class="fcoi y"><i class="fas fa-star"></i></div>
+                        <div><span class="fcnum">4.9/5</span><span class="fcsm">13k+ reviews</span></div>
+                     </div>
+                     <div class="fcard fc3">
+                        <div class="fcoi g"><i class="fas fa-clock"></i></div>
+                        <div><span class="fcnum">18 min</span><span class="fcsm">Taproom service</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- MARQUEE -->
+      <div class="mqsec">
+         <div class="mqtrack">
+            <div class="mqitem"><i class="fas fa-circle"></i>Golden Ale</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Amber Harvest</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Night Shift Stout</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Citrus Bloom IPA</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Hazy Horizon</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Barrel Reserve</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Cellar Saison</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Golden Ale</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Amber Harvest</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Night Shift Stout</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Citrus Bloom IPA</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Hazy Horizon</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Barrel Reserve</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Cellar Saison</div>
+         </div>
+      </div>
+      <!-- CATEGORY -->
+      <section id="category">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What We Brew</span>
+               <h2 class="stitle">Browse by <span>Style</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">From crisp lagers to rich stouts, discover the brews that define Deeh Breweries.</p>
+            </div>
+            <div class="row g-3 justify-content-center">
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+                  <div class="catcard active" data-filter="all">
+                     <img class="catimg" src="{% static 'images/category/1.svg' %}" alt=""/>
+                     <div class="catnm">All Brews</div>
+                     <div class="catct">40 styles</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="70">
+                  <div class="catcard" data-filter="burgers">
+                     <img class="catimg" src="{% static 'images/category/2.svg' %}" alt=""/>
+                     <div class="catnm">Ales</div>
+                     <div class="catct">14 pours</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="140">
+                  <div class="catcard" data-filter="pizza">
+                     <img class="catimg" src="{% static 'images/category/3.svg' %}" alt=""/>
+                     <div class="catnm">Lagers</div>
+                     <div class="catct">9 pours</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="210">
+                  <div class="catcard" data-filter="chicken">
+                     <img class="catimg" src="{% static 'images/category/4.svg' %}" alt=""/>
+                     <div class="catnm">Stouts</div>
+                     <div class="catct">8 pours</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="280">
+                  <div class="catcard" data-filter="wraps">
+                     <img class="catimg" src="{% static 'images/category/5.svg' %}" alt=""/>
+                     <div class="catnm">IPAs</div>
+                     <div class="catct">11 pours</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="desserts">
+                     <img class="catimg" src="{% static 'images/category/6.svg' %}" alt=""/>
+                     <div class="catnm">Seasonals</div>
+                     <div class="catct">6 pours</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ABOUT -->
+      <section id="about">
+         <div class="container">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-5" data-aos="fade-right">
+                  <div class="astack">
+                     <div class="aexp"><span class="anum">12+</span><small>Years of<br/>Excellence</small></div>
+                     <div class="amain"><img src="https://images.unsplash.com/photo-1505075106905-fb052892c116?auto=format&fit=crop&w=900&q=80" alt="Kenyan brewery interior"/></div>
+                     <div class="asm"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=700&q=80" alt="Craft beer brewing setup"/></div>
+                  </div>
+               </div>
+               <div class="col-lg-7" data-aos="fade-left">
+                  <span class="slbl">Our Story</span>
+                  <h2 class="stitle text-start">Brewed for Good<br/>Times and <span>Great Pours</span></h2>
+                  <div class="sline lft"></div>
+                  <p class="sdesc mb-4">Founded in 2012, Deeh Breweries began with a simple dream: to craft beer that feels personal, bold, and worth sharing. Today, we brew small-batch favorites that bring neighbors, friends, and travelers together around the tap.</p>
+                  <div class="mb-4">
+                     <div class="fti">
+                        <div class="ftico r"><i class="fas fa-leaf"></i></div>
+                        <div>
+                           <h6>Locally Sourced Ingredients</h6>
+                           <p>We work with regional growers and maltsters to bring fresh, quality ingredients to every batch.</p>
+                        </div>
+                     </div>
+                     <div class="fti">
+                        <div class="ftico y"><i class="fas fa-award"></i></div>
+                        <div>
+                           <h6>Award-Winning Brews</h6>
+                           <p>Our taps have earned multiple local and national recognition for consistency, taste, and character.</p>
+                        </div>
+                     </div>
+                     <div class="fti">
+                        <div class="ftico g"><i class="fas fa-beer"></i></div>
+                        <div>
+                           <h6>Slow-Brewed, Better-Poured</h6>
+                           <p>Every beer is brewed in small batches, fermented with care, and poured to highlight its full flavor.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <a href="#menu" class="btn-red"><i class="fas fa-book-open"></i>View Our Brews</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ============================================================
+         MENU � FIX 3 (filter works) + FIX 4 (plus opens popup)
+         ============================================================ -->
+      <section id="menu">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Fresh Off The Tap</span>
+               <h2 class="stitle">Our Signature <span>Brews</span></h2>
+               <div class="sline"></div>
+            </div>
+            <div class="text-center mb-4" data-aos="fade-up">
+               <button class="filtbtn active" data-f="all">All</button>
+               <button class="filtbtn" data-f="burgers">Ales</button>
+               <button class="filtbtn" data-f="pizza">Lagers</button>
+               <button class="filtbtn" data-f="chicken">Stouts</button>
+               <button class="filtbtn" data-f="wraps">IPAs</button>
+               <button class="filtbtn" data-f="desserts">Seasonals</button>
+               <button class="filtbtn" data-f="pasta">Limited Series</button>
+            </div>
+            <div class="row g-4" id="mgrid">
+               <!-- CARD 1: Burgers -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="burgers" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="{% static 'images/menu/1.svg' %}"
+                     data-title="Sunset Pale Ale"
+                     data-cat="Ales"
+                     data-price="KSh 850" data-old="KSh 1,050"
+                     data-rating="4.9" data-reviews="128"
+                     data-cal="180" data-time="12"
+                     data-desc="A bright, citrus-forward pale ale with a smooth malt backbone, lively hops, and a crisp finish that keeps you coming back for another pour."
+                     data-tags="Citrus,Bestseller,Fresh">
+                     <div class="mimg">
+                        <img src="{% static 'images/menu/1.svg' %}" alt="Sunset Pale Ale"/>
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Favorite</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Ales</div>
+                        <div class="mtit">Sunset Pale Ale</div>
+                        <div class="mdesc">Citrus hops, balanced malt, and a crisp finish with easy-drinking character.</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">KSh 850 <small>KSh 1,050</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: Pizza -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="{% static 'images/menu/2.svg' %}"
+                     data-title="Amber Harvest Lager"
+                     data-cat="Lagers"
+                     data-price="KSh 900" data-old="KSh 1,100"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="170" data-time="18"
+                     data-desc="A clean, balanced amber lager with toasted malt sweetness, floral aroma, and a smooth finish designed for easy sipping."
+                     data-tags="Balanced,New,Classic">
+                     <div class="mimg">
+                        <img src="{% static 'images/menu/2.svg' %}" alt="Amber Harvest Lager"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Lagers</div>
+                        <div class="mtit">Amber Harvest Lager</div>
+                        <div class="mdesc">Toasted malt sweetness, floral aromatics, and a smooth amber finish.</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">KSh 900 <small>KSh 1,100</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 3: Chicken -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="chicken" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="{% static 'images/menu/3.svg' %}"
+                     data-title="Night Shift Stout"
+                     data-cat="Stouts"
+                     data-price="KSh 1,050" data-old="KSh 1,350"
+                     data-rating="5.0" data-reviews="210"
+                     data-cal="230" data-time="15"
+                     data-desc="Dark roasted malt, cocoa richness, and a velvety finish with subtle espresso notes reminiscent of an after-hours pour."
+                     data-tags="Dark,Roasted,Bestseller">
+                     <div class="mimg">
+                        <img src="{% static 'images/menu/3.svg' %}" alt="Night Shift Stout"/>
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Stouts</div>
+                        <div class="mtit">Night Shift Stout</div>
+                        <div class="mdesc">Roasted malt, cocoa depth, and a silky finish with espresso warmth.</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">KSh 1,050 <small>KSh 1,350</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 4: Wraps -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="wraps" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="{% static 'images/menu/4.svg' %}"
+                     data-title="Citrus Bloom IPA"
+                     data-cat="IPAs"
+                     data-price="KSh 1,100" data-old=""
+                     data-rating="4.5" data-reviews="74"
+                     data-cal="200" data-time="10"
+                     data-desc="A juicy, hop-forward IPA layered with orange peel, grapefruit, and tropical aromas for a bright and refreshing finish."
+                     data-tags="Hoppy,Fresh,Citrus">
+                     <div class="mimg">
+                        <img src="{% static 'images/menu/4.svg' %}" alt="Citrus Bloom IPA"/>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">IPAs</div>
+                        <div class="mtit">Citrus Bloom IPA</div>
+                        <div class="mdesc">Juicy hops, tropical fruit notes, and a bright grapefruit finish.</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">KSh 1,100</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 5: Desserts -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="desserts" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="{% static 'images/menu/5.svg' %}"
+                     data-title="Harvest Saison"
+                     data-cat="Seasonals"
+                     data-price="KSh 975" data-old="KSh 1,225"
+                     data-rating="4.9" data-reviews="56"
+                     data-cal="190" data-time="8"
+                     data-desc="A farmhouse saison with peppery spice, a gentle floral lift, and a crisp finish that celebrates the season's freshest ingredients."
+                     data-tags="Seasonal,New,Spicy">
+                     <div class="mimg">
+                        <img src="{% static 'images/menu/5.svg' %}" alt="Harvest Saison"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Seasonals</div>
+                        <div class="mtit">Harvest Saison</div>
+                        <div class="mdesc">Peppery spice, floral aroma, and a crisp farmhouse finish.</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">KSh 975 <small>KSh 1,225</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 6: Pasta -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pasta" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="{% static 'images/menu/6.svg' %}"
+                     data-title="Cellar Reserve Ale"
+                     data-cat="Limited Series"
+                     data-price="KSh 1,400" data-old=""
+                     data-rating="4.9" data-reviews="88"
+                     data-cal="240" data-time="20"
+                     data-desc="A cellar-aged specialty ale with layered caramel notes, oak warmth, and a refined finish built for slow sipping."
+                     data-tags="Reserve,Limited,Barrel-Aged">
+                     <div class="mimg">
+                        <img src="{% static 'images/menu/6.svg' %}" alt="Cellar Reserve Ale"/>
+                        <div class="mbdg hot">Cellar Pick</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Limited Series</div>
+                        <div class="mtit">Cellar Reserve Ale</div>
+                        <div class="mdesc">Oak-aged depth, caramel warmth, and a polished finish made for slow sipping.</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">KSh 1,400</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end #mgrid -->
+            <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Menu</a></div>
+         </div>
+      </section>
+	  
+	  
+      <!-- ============================================================
+         FIX 4 � MENU DETAIL POPUP MODAL
+         ============================================================ -->
+      <div id="menuPop">
+         <div class="mpbox">
+            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+            <div class="mpimg"><img id="mpImg" src="" alt=""/></div>
+            <div class="mpbody">
+               <div id="mpCat"></div>
+               <div id="mpTitle"></div>
+               <div id="mpStars"></div>
+               <div id="mpDesc"></div>
+               <div id="mpPrice"></div>
+               <div class="mpmeta" id="mpMeta"></div>
+               <div class="mpqty">
+                  <button class="mpqbtn" id="mpMinus">-</button>
+                  <span class="mpqnum" id="mpQnum">1</span>
+                  <button class="mpqbtn" id="mpPlus">+</button>
+                  <span style="font-size:.82rem;color:#aaa;margin-left:9px;">portion</span>
+               </div>
+               <div class="mptags" id="mpTags"></div>
+               <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            </div>
+         </div>
+      </div>
+      <!-- SPECIAL OFFER -->
+      <section id="special">
+         <div class="spbg"></div>
+         <div class="container" style="position:relative;z-index:2;">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="sptag"><i class="fas fa-bolt me-1"></i>Weekend Tasting Offer</div>
+                  <h2 class="sptitle">Get 30% Off<br/>Our Signature<br/><span>Flight</span> Pairing</h2>
+                  <p class="spdesc">Don't miss our weekend tasting flight - a curated mix of our most-loved ales, stouts, and seasonal pours paired with chef-selected bites from the taproom kitchen.</p>
+                  <div class="cdwrap">
+                     <div class="cditem"><span class="cdnum" id="cdH">08</span><span class="cdlbl">Hours</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Minutes</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Seconds</span></div>
+                  </div>
+                  <a href="#menu" class="btn-red"><i class="fas fa-beer"></i>Reserve a Flight</a>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="spimgw">
+                     <div class="spglow"></div>
+                     <div class="sppbdg"><span class="old">KSh 2,499</span><span class="np">KSh 1,749</span></div>
+                     <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80" alt="Brewery tasting flight in Rongai"/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+	  
+      <!-- ============================================================
+         GALLERY � FIX 7 (click opens detail popup)
+         ============================================================ -->
+      <section id="gallery">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Taproom Moments</span>
+               <h2 class="stitle">See the <span>Deeh Experience</span></h2>
+               <div class="sline"></div>
+            </div>
+            <div class="ggrid" data-aos="fade-up">
+               <div class="gitem"
+                  data-gi="0"
+                  data-gimg="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80"
+                  data-gtitle="Golden Ale Pour"
+                  data-gdesc="Bright, crisp, and full of citrus character, our golden ale is a favorite for laid-back afternoons and lively gatherings.">
+                  <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80" alt="Golden Ale"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Golden Ale Pour</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="1"
+                  data-gimg="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80"
+                  data-gtitle="Barrel Reserve Tasting"
+                  data-gdesc="A smooth, oak-aged specialty brew with layered caramel notes and a warming, refined finish.">
+                  <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80" alt="Barrel Reserve"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Barrel Reserve Tasting</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="2"
+                  data-gimg="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80"
+                  data-gtitle="Stout Night Pour"
+                  data-gdesc="Dark, roasty, and rich with cocoa and coffee notes, perfectly crafted for slow sipping by candlelight.">
+                  <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80" alt="Stout"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Stout Night Pour</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="3"
+                  data-gimg="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=80"
+                  data-gtitle="Seasonal Release"
+                  data-gdesc="Fresh seasonal brews with bright botanical notes, spiced warmth, and an unmistakable local flair.">
+                  <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=80" alt="Seasonal Brew"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Seasonal Release</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="4"
+                  data-gimg="https://images.unsplash.com/photo-1558642891-54be180ea339?auto=format&fit=crop&w=900&q=80"
+                  data-gtitle="Citrus Bloom IPA"
+                  data-gdesc="Lively tropical fruit aromas and zesty bitterness for the perfect balance of freshness and boldness.">
+                  <img src="https://images.unsplash.com/photo-1558642891-54be180ea339?auto=format&fit=crop&w=900&q=80" alt="IPA"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Citrus Bloom IPA</span></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FIX 7 � GALLERY POPUP -->
+      <div id="galPop">
+         <div class="gpbox">
+            <button class="gpclose" id="gpClose"><i class="fas fa-times"></i></button>
+            <img id="gpImg" src="" alt=""/>
+            <div class="gpcap">
+               <h5 id="gpTitle"></h5>
+               <p id="gpDesc"></p>
+            </div>
+            <div class="gpnav">
+               <button id="gpPrev"><i class="fas fa-chevron-left me-1"></i>Prev</button>
+               <button id="gpNext">Next <i class="fas fa-chevron-right ms-1"></i></button>
+            </div>
+         </div>
+      </div>
+	  
+	  
+      <!-- ============================================================
+         HISTORY � FIX 8 (alternating left/right text)
+         ============================================================ -->
+      <section id="history">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Our Journey</span>
+               <h2 class="stitle">A History of <span>Brewing</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">From a single homebrew experiment to a full-fledged taproom favorite, every chapter of Deeh Breweries has been poured with purpose.</p>
+            </div>
+            <div class="timeline" data-aos="fade-up">
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">2012</div>
+                     <h5>First Brews, First Fans</h5>
+                     <p>Deeh began with a small pilot system and a handful of friends who wanted better beer, smoother pours, and more memorable nights.</p>
+                  </div>
+                  <div class="tl-center">
+                     <div class="tldot"></div>
+                  </div>
+                  <div class="tl-right">
+                     <div class="tlyear">2012</div>
+                     <h5>First Brews, First Fans</h5>
+                     <p>Deeh began with a small pilot system and a handful of friends who wanted better beer, smoother pours, and more memorable nights.</p>
+                  </div>
+               </div>
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">2015</div>
+                     <h5>Taproom Beginnings</h5>
+                     <p>We opened our first taproom and began crafting seasonal releases that quickly became local favorites across the city.</p>
+                  </div>
+                  <div class="tl-center">
+                     <div class="tldot"></div>
+                  </div>
+                  <div class="tl-right">
+                     <div class="tlyear">2015</div>
+                     <h5>Taproom Beginnings</h5>
+                     <p>We opened our first taproom and began crafting seasonal releases that quickly became local favorites across the city.</p>
+                  </div>
+               </div>
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">2019</div>
+                     <h5>Craft Reputation</h5>
+                     <p>Our house ales and IPAs gained national attention, earning local awards and drawing weekend crowds eager for a fresh pour.</p>
+                  </div>
+                  <div class="tl-center">
+                     <div class="tldot"></div>
+                  </div>
+                  <div class="tl-right">
+                     <div class="tlyear">2019</div>
+                     <h5>Craft Reputation</h5>
+                     <p>Our house ales and IPAs gained national attention, earning local awards and drawing weekend crowds eager for a fresh pour.</p>
+                  </div>
+               </div>
+               <div class="tli">
+                  <div class="tl-left">
+                     <div class="tlyear">2026</div>
+                     <h5>Growing the Brew</h5>
+                     <p>Today, our taproom hosts tastings, events, and community gatherings while our brewery continues to grow with every new release.</p>
+                  </div>
+                  <div class="tl-center">
+                     <div class="tldot"></div>
+                  </div>
+                  <div class="tl-right">
+                     <div class="tlyear">2026</div>
+                     <h5>Growing the Brew</h5>
+                     <p>Today, our taproom hosts tastings, events, and community gatherings while our brewery continues to grow with every new release.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+	  
+	  
+      <!-- HOURS -->
+      <section id="hours">
+         <div class="hrsbg"></div>
+         <div class="container" style="position:relative;z-index:2;">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl" style="color:#a5d6bc;">Taproom Hours</span>
+               <h2 class="stitle" style="color:#fff;">We're Open <span style="color:var(--secondary);">For Pours</span></h2>
+               <div class="sline"></div>
+            </div>
+            <div class="row g-4 align-items-start">
+               <div class="col-lg-5" data-aos="fade-right">
+                  <div class="hrscard">
+                     <div class="hrsrow">
+                        <span class="hrsday"><i class="fas fa-calendar-day me-2" style="color:var(--secondary);"></i>Monday - Tuesday</span>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="hdot off"></div>
+                           <span class="hrstime" style="color:#ff6b6b;">Closed</span>
+                        </div>
+                     </div>
+                     <div class="hrsrow">
+                        <span class="hrsday"><i class="fas fa-calendar-day me-2" style="color:var(--secondary);"></i>Wednesday - Thursday</span>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="hdot on"></div>
+                           <span class="hrstime">12:00 PM - 10:00 PM</span>
+                        </div>
+                     </div>
+                     <div class="hrsrow">
+                        <span class="hrsday"><i class="fas fa-calendar-day me-2" style="color:var(--secondary);"></i>Friday</span>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="hdot on"></div>
+                           <span class="hrstime">12:00 PM - 11:00 PM</span>
+                        </div>
+                     </div>
+                     <div class="hrsrow">
+                        <span class="hrsday"><i class="fas fa-calendar-day me-2" style="color:var(--secondary);"></i>Saturday</span>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="hdot on"></div>
+                           <span class="hrstime">11:00 AM - 11:30 PM</span>
+                        </div>
+                     </div>
+                     <div class="hrsrow">
+                        <span class="hrsday"><i class="fas fa-calendar-day me-2" style="color:var(--secondary);"></i>Sunday</span>
+                        <div class="d-flex align-items-center gap-2">
+                           <div class="hdot on"></div>
+                           <span class="hrstime">11:00 AM - 09:00 PM</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3" data-aos="zoom-in">
+                  <div class="hrscta">
+                     <i class="fas fa-beer fa-2x mb-3" style="color:rgba(255,255,255,.8);"></i>
+                     <h4>Book a Flight</h4>
+                     <p>Sample our best pours in the taproom.</p>
+                     <a href="#menu" class="btnw">Reserve Now</a>
+                  </div>
+               </div>
+               <div class="col-lg-4" data-aos="fade-left">
+                  <div class="hrscard">
+                     <h5 style="color:#fff;margin-bottom:18px;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:700;"><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary);"></i>Find Us</h5>
+                     <div class="hrsrow"><span class="hrsday"><i class="fas fa-location-dot me-2" style="color:var(--secondary);"></i>Address</span><span class="hrstime" style="font-size:.8rem;">Rongai, Nairobi, Kenya</span></div>
+                     <div class="hrsrow"><span class="hrsday"><i class="fas fa-phone me-2" style="color:var(--secondary);"></i>Phone</span><span class="hrstime" style="font-size:.8rem;">+254 712 345 678</span></div>
+                     <div class="hrsrow"><span class="hrsday"><i class="fas fa-envelope me-2" style="color:var(--secondary);"></i>Email</span><span class="hrstime" style="font-size:.8rem;">hello@deehbreweries.co.ke</span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+	  
+      <!-- TESTIMONIALS -->
+      <section id="testimonials">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Loved By Locals</span>
+               <h2 class="stitle">What Our Guests <span>Say</span></h2>
+               <div class="sline"></div>
+            </div>
+            <div class="swiper tesSwiper" data-aos="fade-up">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">The Sunset Pale is fantastic. Clean, bright, and easy to love. The vibe in the taproom feels relaxed, welcoming, and genuinely local.</p>
+                        <div class="tesauth">
+                           <img src="{% static 'images/testimonial/1.svg' %}" alt=""/>
+                           <div>
+                              <div class="tesnm">Monica Wilber</div>
+                              <div class="tesrl">Regular Guest</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">The tasting flight made the whole night. We tried a few styles and ended up taking home a case of the Citrus Bloom IPA.</p>
+                        <div class="tesauth">
+                           <img src="{% static 'images/testimonial/2.svg' %}" alt=""/>
+                           <div>
+                              <div class="tesnm">Cameron Fox</div>
+                              <div class="tesrl">Beer Enthusiast</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">The atmosphere is laid-back, the staff is knowledgeable, and the seasonal pours are always on point. Deeh feels like a true neighborhood brewery.</p>
+                        <div class="tesauth">
+                           <img src="{% static 'images/testimonial/3.svg' %}" alt=""/>
+                           <div>
+                              <div class="tesnm">Priya Sharma</div>
+                              <div class="tesrl">Local Regular</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">We booked a tasting for friends and everybody loved the Night Shift Stout. It was one of the smoothest stouts we've had in a long time.</p>
+                        <div class="tesauth">
+                           <img src="{% static 'images/testimonial/4.svg' %}" alt=""/>
+                           <div>
+                              <div class="tesnm">David Park</div>
+                              <div class="tesrl">Weekend Visitor</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-pagination mt-4" style="position:static;"></div>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- RESERVATION FORM -->
+      <section id="reservation">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Book a Tasting</span>
+               <h2 class="stitle">Reserve Your <span>Taproom Table</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Set aside time for a tasting flight, a relaxed evening, or a private brewery experience with the Deeh crew.</p>
+            </div>
+            <div class="row g-4 align-items-start">
+               <div class="col-lg-4" data-aos="fade-right">
+                  <div style="background:var(--dark);border-radius:18px;padding:36px;">
+                     <h4 style="color:#fff;font-size:1.3rem;margin-bottom:8px;">Visit Info</h4>
+                     <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:26px;">We'd love to help you plan the perfect brewery visit.</p>
+                     <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-clock"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Taproom Hours</strong><span style="color:#fff;font-size:.87rem;">Wed - Sun, 11 AM - 11 PM</span></div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-phone-alt"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Call to Book</strong><span style="color:#fff;font-size:.87rem;">+254 712 345 678</span></div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-users"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Private Events</strong><span style="color:#fff;font-size:.87rem;">Group tastings for 10+ guests</span></div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-map-marker-alt"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Location</strong><span style="color:#fff;font-size:.87rem;">Rongai, Nairobi, Kenya</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-8" data-aos="fade-left">
+                  <div class="fcard">
+                     <div class="row g-3">
+                        <div class="col-sm-6"><label class="flbl">Full Name *</label><input type="text" class="fctrl" placeholder="Jane Doe"/></div>
+                        <div class="col-sm-6"><label class="flbl">Phone Number *</label><input type="tel" class="fctrl" placeholder="+1 (800) 000-0000"/></div>
+                        <div class="col-sm-6"><label class="flbl">Email Address *</label><input type="email" class="fctrl" placeholder="you@email.com"/></div>
+                        <div class="col-sm-6">
+                           <label class="flbl">Number of Guests *</label>
+                           <select class="fctrl">
+                              <option>1 Guest</option>
+                              <option>2 Guests</option>
+                              <option>3 - 4 Guests</option>
+                              <option>5 - 6 Guests</option>
+                              <option>7 - 10 Guests</option>
+                              <option>10+ Guests</option>
+                           </select>
+                        </div>
+                        <div class="col-sm-6"><label class="flbl">Date *</label><input type="date" class="fctrl"/></div>
+                        <div class="col-sm-6">
+                           <label class="flbl">Time *</label>
+                           <select class="fctrl">
+                              <option>11:00 AM</option>
+                              <option>12:00 PM</option>
+                              <option>01:00 PM</option>
+                              <option>02:00 PM</option>
+                              <option>06:00 PM</option>
+                              <option>07:00 PM</option>
+                              <option>08:00 PM</option>
+                              <option>09:00 PM</option>
+                              <option>10:00 PM</option>
+                           </select>
+                        </div>
+                        <div class="col-12"><label class="flbl">Special Requests</label><textarea class="fctrl" rows="3" placeholder="Favorite styles, birthday notes, private seating preferences..."></textarea></div>
+                        <div class="col-12"><button class="btn-red w-100 justify-content-center" id="resBtn"><i class="fas fa-calendar-check"></i>Confirm Reservation</button></div>
+                     </div>
+                     <div class="sucmsg" id="resOk">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Reservation confirmed! We’ll send your tasting details by email.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- BLOG -->
+      <section id="blog">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Brew Journal</span>
+               <h2 class="stitle">Our Latest <span>Stories</span></h2>
+               <div class="sline"></div>
+            </div>
+            <div class="row g-4">
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="{% static 'images/blog/1.svg' %}" alt=""/>
+                        <div class="bldatebdg"><span class="bd">14</span><span class="bm">Mar</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Brew Notes</div>
+                        <div class="bltit"><a href="#">The Art of Building a Balanced Hazy IPA</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>James Hops</span><span><i class="fas fa-comment"></i>24 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="{% static 'images/blog/2.svg' %}" alt=""/>
+                        <div class="bldatebdg"><span class="bd">28</span><span class="bm">Feb</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Beer Science</div>
+                        <div class="bltit"><a href="#">Inside Our Slow Fermentation Process</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>Sarah Grain</span><span><i class="fas fa-comment"></i>18 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="{% static 'images/blog/3.svg' %}" alt=""/>
+                        <div class="bldatebdg"><span class="bd">05</span><span class="bm">Jan</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Events</div>
+                        <div class="bltit"><a href="#">What to Expect at Our Winter Taproom Release Night</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>Marcus Brew</span><span><i class="fas fa-comment"></i>32 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- NEWSLETTER -->
+      <section id="newsletter">
+         <div class="nlbg"></div>
+         <div class="container">
+            <div class="nlw text-center" data-aos="zoom-in">
+               <span class="slbl" style="color:rgba(255,255,255,.7);">Stay In The Loop</span>
+               <h2 class="mb-3" style="color:#fff;">Subscribe for <span style="color:var(--secondary);">Fresh Drops</span></h2>
+               <p class="mb-4" style="color:rgba(255,255,255,.78);">Get first access to seasonal launches, event nights, and taproom specials.</p>
+               <div class="nl-form-wrap">
+                  <input class="nlinput" type="email" id="nlEmail" placeholder="Enter your email address..."/>
+                  <button class="nlbtn" id="nlBtn"><i class="fas fa-paper-plane me-1"></i>Subscribe</button>
+               </div>
+               <p style="color:rgba(255,255,255,.45);font-size:.76rem;margin-top:11px;"><i class="fas fa-lock me-1"></i>No spam, unsubscribe anytime.</p>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- ============================================================
+         FIX 6 � CONTACT FORM
+         ============================================================ -->
+      <section id="contact-section">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Say Hello</span>
+               <h2 class="stitle">Contact <span>Deeh</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Have a question, want to plan a tasting, or tell us about your favorite brew? We’d love to hear from you.</p>
+            </div>
+            <div class="row g-4">
+               <div class="col-lg-4" data-aos="fade-right">
+                  <div class="ctdark">
+                     <h4>Let's Talk</h4>
+                     <p class="ctsub">We usually respond within 2 hours during open taproom hours.</p>
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ctinfo"><strong>Address</strong><span>Rongai, Nairobi,<br/>Kenya</span></div>
+                     </div>
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="ctinfo"><strong>Phone</strong><span>+254 712 345 678</span></div>
+                     </div>
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-envelope"></i></div>
+                        <div class="ctinfo"><strong>Email</strong><span>hello@deehbreweries.co.ke</span></div>
+                     </div>
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-clock"></i></div>
+                        <div class="ctinfo"><strong>Working Hours</strong><span>Wed - Sun: 11 AM - 11 PM</span></div>
+                     </div>
+                     <div class="ctsocrow">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-8" data-aos="fade-left">
+                  <div class="fcard">
+                     <div class="row g-3">
+                        <div class="col-sm-6"><label class="flbl">Your Name *</label><input type="text" class="fctrl" placeholder="Jane Doe"/></div>
+                        <div class="col-sm-6"><label class="flbl">Email Address *</label><input type="email" class="fctrl" placeholder="you@email.com"/></div>
+                        <div class="col-sm-6"><label class="flbl">Phone Number</label><input type="tel" class="fctrl" placeholder="+1 (800) 000-0000"/></div>
+                        <div class="col-sm-6">
+                           <label class="flbl">Subject *</label>
+                           <select class="fctrl">
+                              <option>General Inquiry</option>
+                              <option>Private Tasting</option>
+                              <option>Feedback</option>
+                              <option>Partnership</option>
+                              <option>Media &amp; Press</option>
+                           </select>
+                        </div>
+                        <div class="col-12"><label class="flbl">Message *</label><textarea class="fctrl" rows="5" placeholder="Write your message here..."></textarea></div>
+                        <div class="col-12"><button class="btn-red" id="ctcBtn"><i class="fas fa-paper-plane"></i>Send Message</button></div>
+                     </div>
+                     <div class="sucmsg" id="ctcOk">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Message sent! We’ll reply within 2 hours.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Deeh <span>Breweries</span></div>
+                  <p class="fdesc">We craft bold, balanced beers for slow afternoons, lively evenings, and memorable taproom nights.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                     <a href="#"><i class="fab fa-tiktok"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Quick Links</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                     <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Our Brews</a></li>
+                     <li><a href="#reservation"><i class="fas fa-chevron-right"></i>Tastings</a></li>
+                     <li><a href="#blog"><i class="fas fa-chevron-right"></i>Journal</a></li>
+                     <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Popular Brews</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Sunset Pale</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Amber Harvest</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Night Shift Stout</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Citrus Bloom IPA</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Harvest Saison</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Cellar Reserve</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Get In Touch</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Address</strong>Rongai, Nairobi, Kenya</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Phone</strong>+254 712 345 678</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>hello@deehbreweries.co.ke</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-clock"></i></div>
+                     <div class="fciinfo"><strong>Hours</strong>Wed - Sun: 11 AM - 11 PM</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy 2026 <span>Deeh Breweries</span>. All Rights Reserved by <a target="_blank" class="mx-0 fw-bold text-success" href="https://bestwpware.com/">Bestwpware</a>. Made with <span><i class="fas fa-heart"></i></span>  <br>Distributed by <a target="_blank" class="mx-0 fw-bold text-success" href="https://themewagon.com">ThemeWagon</a></p>
+                  <div><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Floating cart -->
+      <!-- <div class="cartfl"><i class="fas fa-shopping-cart"></i><span>My Cart</span><div class="ccount" id="cartCount">0</div></div> -->
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+	<!-- jQuery -->
+      <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+      <!-- Bootstrap 5 -->
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <!-- AOS -->
+      <script src="{% static 'js/aos.js' %}"></script>
+      <!-- Swiper -->
+      <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+      <!-- CounterUp -->
+      <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+      <!-- Main js -->
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>

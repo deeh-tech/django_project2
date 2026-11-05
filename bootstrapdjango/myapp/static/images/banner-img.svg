@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1d120b"/>
+      <stop offset="100%" stop-color="#a0562d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="620" cy="150" r="100" fill="rgba(255,255,255,0.09)"/>
+  <circle cx="180" cy="650" r="140" fill="rgba(255,255,255,0.07)"/>
+  <path d="M300 180h200v350c0 78-64 142-142 142s-142-64-142-142V180z" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.75)" stroke-width="7"/>
+  <path d="M282 180h236l-28 56H310z" fill="#f0c07a"/>
+  <rect x="315" y="260" width="170" height="170" rx="18" fill="rgba(255,255,255,0.18)"/>
+  <path d="M350 240c32-26 66-26 100 0" stroke="rgba(255,255,255,0.5)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <rect x="210" y="120" width="380" height="120" rx="28" fill="rgba(18,18,20,0.35)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="400" y="195" text-anchor="middle" font-size="56" fill="white" font-weight="700" font-family="Segoe UI, Arial, sans-serif">DEEH</text>
+  <rect x="205" y="570" width="390" height="80" rx="18" fill="rgba(14,22,30,0.45)" stroke="rgba(255,255,255,0.22)"/>
+  <text x="400" y="620" text-anchor="middle" font-size="24" fill="rgba(255,255,255,0.8)" font-family="Segoe UI, Arial, sans-serif" letter-spacing="4">BREWERIES</text>
+</svg>

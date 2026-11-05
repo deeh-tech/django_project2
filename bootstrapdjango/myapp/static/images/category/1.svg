@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a1b2f"/>
+      <stop offset="100%" stop-color="#4f5679"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="312" cy="82" r="52" fill="rgba(255,255,255,0.12)"/>
+  <path d="M140 90h120v220c0 32-26 58-58 58s-62-26-62-58V90z" fill="rgba(255,255,255,0.26)" stroke="rgba(255,255,255,0.7)" stroke-width="4"/>
+  <path d="M126 90h148l-18 32H144z" fill="#b7c3ff"/>
+  <rect x="145" y="150" width="110" height="110" rx="12" fill="rgba(255,255,255,0.18)"/>
+  <text x="200" y="295" text-anchor="middle" font-size="22" fill="white" font-weight="700" font-family="Segoe UI, Arial, sans-serif">ALL</text>
+  <text x="200" y="330" text-anchor="middle" font-size="16" fill="rgba(255,255,255,0.8)" font-family="Segoe UI, Arial, sans-serif" letter-spacing="3">BREWS</text>
+</svg>
